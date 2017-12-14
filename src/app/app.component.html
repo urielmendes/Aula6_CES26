@@ -1,0 +1,13 @@
+<!-- Aplicativo para criacao de lista de compras -->
+
+
+{{title}}
+<br/>
+<input type="text" [(ngModel)]="item">
+<button type="button" (click)= "add()">Adicionar item</button>
+<button type="button" *ngIf = "newList" (click)= "empty()">Nova lista</button>
+<ol>
+  <li *ngFor="let item of items">
+    {{item}}
+  </li>
+</ol>
